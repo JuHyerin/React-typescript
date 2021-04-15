@@ -1,7 +1,11 @@
 import React from 'react';
 
-
-function Counter({ number, onIncrease, onDecrease }) {
+type CounterProps = {
+    number: number;
+    onIncrease: () => void;
+    onDecrease: () => void;
+}
+function Counter({ number, onIncrease, onDecrease }: CounterProps) {
     return (
         <div>
             <h1>{number}</h1>

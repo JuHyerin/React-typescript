@@ -1,19 +1,23 @@
 import {useSelector, useDispatch} from "react-redux";
 import Counter from "../components/Counter";
-import {decreaseAsync, increaseAsync} from "../modules/counter";
+import {decrease, increase} from "../modules/counter";
+import {RootState} from '../modules'
+// import {decreaseAsync, increaseAsync} from "../modules/counter";
 
 function CounterContainer () {
     const dispatch = useDispatch();
-    const state = useSelector(state => state.counter);
+    const state = useSelector((state: RootState) => state.counter.count);
 
     // const onIncrease = () => dispatch({type: 'INCREASE'});
     // const onDecrease = () => dispatch({type: 'DECREASE'});
 
     const onIncrease = () => {
-        dispatch(increaseAsync());
+        // dispatch(increaseAsync());
+        dispatch(increase());
     };
     const onDecrease = () => {
-        dispatch(decreaseAsync());
+        // dispatch(decreaseAsync());
+        dispatch(decrease());
     };
 
 
