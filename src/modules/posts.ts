@@ -1,12 +1,8 @@
 import * as postsAPi from '../api/posts'
 import {ThunkAction} from "redux-thunk";
 import {RootState} from "./index";
-// import {createStandardAction} from "typesafe-actions/dist/deprecated/create-standard-action";
 import {IPost} from "../api/posts";
-// import {AxiosError} from "axios";
-// import {ActionType, createAsyncAction, createReducer} from "typesafe-actions";
 import {AnyAction} from "redux";
-
 
 
 /*Action Type*/

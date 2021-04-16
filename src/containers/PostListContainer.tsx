@@ -6,7 +6,10 @@ import {getPostsThunk} from "../modules/posts";
 
 
 function PostListContainer() {
-    const { data, loading, error } = useSelector((state:RootState) => state.posts.posts);
+    const { data, loading, error } = useSelector((state:RootState) => {
+        console.log('select postlist')
+        return state.posts.posts
+    });
     const dispatch = useDispatch();
 
     useEffect(() => {

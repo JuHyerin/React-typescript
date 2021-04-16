@@ -12,6 +12,7 @@ function PostContainer (props: PostContainerProps) {
     console.log('--------PostContainer rendered')
     const {data, loading, error} = useSelector(
         (state:RootState) => {
+            console.log('select post')
             return state.posts.post[props.postId]
         }
     ) || {
