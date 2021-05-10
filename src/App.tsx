@@ -16,7 +16,7 @@ function App() {
       clickable: true,
     }
   }
-//Git Test
+//Git Test2
   return (
     <Swiper
       spaceBetween={50}
